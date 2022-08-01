@@ -6,6 +6,6 @@ An extension that adds rich support for the [Narrat](https://get-narrat.com) pro
 
 ### Syntax Highlighting
 
-\!\[syntax highlighting\]\(screenshots/syntax.gif\)
+[syntax highlighting](screenshots/syntax.gif)
 
 > The syntax highlighting depends on the syntax theme used.
