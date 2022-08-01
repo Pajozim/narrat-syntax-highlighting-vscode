@@ -4,6 +4,9 @@
   "patterns": [
     {
       "include": "#expression"
+    },
+    {
+      "include": "#comments"
     }
   ],
   "repository": {
@@ -41,15 +44,15 @@
         },
         {
           "name": "entity.name.function.narrat",
-          "match": "^\\w+(?=( |\\w)*:)"
+          "match": "(?x)                  # Ignore comments\n  ^\\w+                # Find label name\n  (?=(\\s|\\w)*:)       # Positive lookahead for ':'\n"
         },
         {
           "name": "invalid.label.narrat",
-          "match": "\n(?x) # Ignore comments\n  ^\\w+ # label name\n  (?!( |\\w)*:) # Negative Lookahead to find other args + the : at the end\n"
+          "match": "(?x)                  # Ignore comments\n  ^\\w+                # Find label name\n  (?!(\\s|\\w)*:)        # Negative lookahead for ':'\n"
         },
         {
           "name": "entity.other.attribute-name",
-          "match": "^\\w+ \\b(\\w+\\b)?\\b:"
+          "match": "(?<=\\w)[^^](\\b\\w+\\b)(?=(\\s|\\w)*:)"
         }
       ]
     },
@@ -177,6 +180,14 @@
         {
           "name": "constant.language.undefined.narrat",
           "match": "\\bundefined\\b"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.narrat",
+          "match": "#.*$"
         }
       ]
     }

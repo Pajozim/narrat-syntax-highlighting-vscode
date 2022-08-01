@@ -3,6 +3,7 @@
 name: Narrat Language
 patterns:
   - include: "#expression"
+  - include: "#comments"
 repository:
   expression:
     patterns:
@@ -19,15 +20,17 @@ repository:
       - name: variable.value.narrat
         match: \$[\w|\.]+\b
       - name: entity.name.function.narrat
-        match: ^\w+(?=( |\w)*:)
+        match: >
+          (?x)                  # Ignore comments
+            ^\w+                # Find label name
+            (?=(\s|\w)*:)       # Positive lookahead for ':'
       - name: invalid.label.narrat
         match: >
-
-          (?x) # Ignore comments
-            ^\w+ # label name
-            (?!( |\w)*:) # Negative Lookahead to find other args + the : at the end
+          (?x)                  # Ignore comments
+            ^\w+                # Find label name
+            (?!(\s|\w)*:)        # Negative lookahead for ':'
       - name: entity.other.attribute-name
-        match: "^\\w+ \\b(\\w+\\b)?\\b:"
+        match: "(?<=\\w)[^^](\\b\\w+\\b)(?=(\\s|\\w)*:)"
 
   commands:
     patterns:
@@ -97,4 +100,8 @@ repository:
         match: \bnull\b
       - name: constant.language.undefined.narrat
         match: \bundefined\b
+  comments:
+    patterns:
+      - name: comment.line.narrat
+        match: "#.*$"
 scopeName: source.narrat
