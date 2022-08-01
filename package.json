@@ -3,7 +3,7 @@
   "displayName": "Narrat Language",
   "description": "Syntax highlighting for narrat scripting language (.nar)",
   "version": "0.0.1",
-  "publisher": "Liana Pigeot",
+  "publisher": "NarratEngine",
   "license": "MIT",
   "homepage": "https://github.com/liana-p/narrat-syntax-highlighting-vscode",
   "repository": {
