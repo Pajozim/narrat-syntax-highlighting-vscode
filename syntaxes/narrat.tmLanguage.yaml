@@ -15,23 +15,57 @@ repository:
   keywords:
     patterns:
       - name: keyword.control.narrat
-        match: \b(if|else)\b
-      - name: keyword.variable.value.narrat
-        match: \b\$[\w|\.]+\b
+        match: \b(if|else|choice)\b
+      - name: variable.value.narrat
+        match: \$[\w|\.]+\b
       - name: entity.name.function.narrat
-        match: ^\w+
-      - name: entity.other.attribute-name.narrat
-        match: \b[a-zA-Z]\w+\b
+        match: ^\w+(?=( |\w)*:)
+      - name: invalid.label.narrat
+        match: >
+
+          (?x) # Ignore comments
+            ^\w+ # label name
+            (?!( |\w)*:) # Negative Lookahead to find other args + the : at the end
+      - name: entity.other.attribute-name
+        match: "^\\w+ \\b(\\w+\\b)?\\b:"
+
   commands:
     patterns:
-      - name: command.set.narrat
-        match: (set) +
-      - name: command.set_stat.narrat
-        match: (set_stat) +
+      - name: keyword.commands.variables.narrat
+        match: \b(set|var)\b
+      - name: keyword.commands.text.narrat
+        match: \b(talk|think)\b
+      - name: keyword.commands.flow.narrat
+        match: \b(jump|run|wait|return|save|save_prompt)
+      - name: keyword.commands.helpers.narrat
+        match: \b(log|clear_dialog)\b
+      - name: keyword.commands.screens.narrat
+        match: \b(set_screen|empty_layer|set_button)
+      - name: keyword.commands.audio.narrat
+        match: \b(play|pause|stop)\b
+      - name: keyword.commands.notifications.narrat
+        match: \b(notify|enable_notifications|disable_notifications)\b
+      - name: keyword.commands.stats.narrat
+        match: \b(set_stat|get_stat_value|add_stat)
+      - name: keyword.commands.math.narrat
+        match: \b(neg|abs|random|random_float|random_from_args|min|max|clamp|floor|round|ceil|sqrt|^)\b
+      - name: keyword.commands.string.narrat
+        match: \b(concat|join)\b
+      - name: keyword.commands.text_field.narrat
+        match: \b(text_field)\b
+      - name: keyword.commands.skills.narrat
+        match: \b(add_level|set_level|add_xp|roll|get_level|get_xp)\b
+      - name: keyword.commands.inventory.narrat
+        match: \b(add_item|remove_item|enable_interaction|disable_interaction|has_item?|item_amount?)
+      - name: keyword.commands.quests.narrat
+        match: \b(start_quest|start_objective|complete_objective|complete_quest|quest_started?|objective_started?|quest_completed?|objective_completed?)
   operators:
     patterns:
-      - name: operator.assignment.narrat
-        match: ==
+      - name: keyword.operator.logic.narrat
+        match: (&&|\|\||!=|==|>=|<=|<|>|!|\?)
+      - name: keyword.operator.arithmetic.narrat
+        match: (\+|-|\*|\/)
+
   strings:
     name: string.quoted.double.narrat
     begin: '"'
@@ -55,12 +89,12 @@ repository:
     patterns:
       - name: constant.numeric.narrat
         match: \b\d+\b
-      - name: constant.boolean.true
+      - name: constant.language.true.narrat
         match: \btrue\b
-      - name: constant.boolean.false
+      - name: constant.language.false.narrat
         match: \bfalse\b
-      - name: constant.null.narrat
+      - name: constant.language.null.narrat
         match: \bnull\b
-      - name: constant.undefined.narrat
+      - name: constant.language.undefined.narrat
         match: \bundefined\b
 scopeName: source.narrat
