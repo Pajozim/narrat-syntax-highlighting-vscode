@@ -4,6 +4,10 @@ All notable changes to the "narratlanguage" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [0.0.2] - 01-08-2022
 
-- Initial release
+- Improved docs, README and contribution guides
+
+## [0.0.1] - Initial release
+
+- Initial release of the syntax highlighting extension
