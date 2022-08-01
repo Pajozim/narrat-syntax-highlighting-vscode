@@ -1,0 +1,66 @@
+---
+"$schema": https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+name: Narrat Language
+patterns:
+  - include: "#expression"
+repository:
+  expression:
+    patterns:
+      - include: "#keywords"
+      - include: "#commands"
+      - include: "#operators"
+      - include: "#primitives"
+      - include: "#strings"
+      - include: "#paren-expression"
+  keywords:
+    patterns:
+      - name: keyword.control.narrat
+        match: \b(if|else)\b
+      - name: keyword.variable.value.narrat
+        match: \b\$[\w|\.]+\b
+      - name: entity.name.function.narrat
+        match: ^\w+
+      - name: entity.other.attribute-name.narrat
+        match: \b[a-zA-Z]\w+\b
+  commands:
+    patterns:
+      - name: command.set.narrat
+        match: (set) +
+      - name: command.set_stat.narrat
+        match: (set_stat) +
+  operators:
+    patterns:
+      - name: operator.assignment.narrat
+        match: ==
+  strings:
+    name: string.quoted.double.narrat
+    begin: '"'
+    end: '"'
+    patterns:
+      - name: constant.character.escape.narrat
+        match: "\\\\."
+  paren-expression:
+    begin: "\\("
+    end: "\\)"
+    beginCaptures:
+      "0":
+        name: punctuation.paren.open
+    endCaptures:
+      "0":
+        name: punctuation.paren.close
+    name: expression.group
+    patterns:
+      - include: "#expression"
+  primitives:
+    patterns:
+      - name: constant.numeric.narrat
+        match: \b\d+\b
+      - name: constant.boolean.true
+        match: \btrue\b
+      - name: constant.boolean.false
+        match: \bfalse\b
+      - name: constant.null.narrat
+        match: \bnull\b
+      - name: constant.undefined.narrat
+        match: \bundefined\b
+scopeName: source.narrat

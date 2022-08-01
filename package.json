@@ -1,0 +1,42 @@
+{
+  "name": "narratlanguage",
+  "displayName": "NarratLanguage",
+  "description": "Syntax highlighting for narrat scripting language (.nar)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "compile": "npx js-yaml syntaxes/narrat.tmLanguage.yaml > syntaxes/narrat.tmLanguage.json"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "narrat",
+        "aliases": [
+          "Narrat Language",
+          "narrat"
+        ],
+        "extensions": [
+          ".nar",
+          ".narrat",
+          ".rat"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "narrat",
+        "scopeName": "source.narrat",
+        "path": "./syntaxes/narrat.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
