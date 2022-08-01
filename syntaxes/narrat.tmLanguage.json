@@ -128,6 +128,14 @@
         }
       ]
     },
+    "interpolation": {
+      "patterns": [
+        {
+          "name": "variable.interpolation.narrat",
+          "match": "(\\w|\\.)+"
+        }
+      ]
+    },
     "strings": {
       "name": "string.quoted.double.narrat",
       "begin": "\"",
@@ -136,6 +144,29 @@
         {
           "name": "constant.character.escape.narrat",
           "match": "\\\\."
+        },
+        {
+          "name": "expression.template",
+          "begin": "%{",
+          "end": "}",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.template.open"
+            }
+          },
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.template.close.narrat"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#expression"
+            },
+            {
+              "include": "#interpolation"
+            }
+          ]
         }
       ]
     },
