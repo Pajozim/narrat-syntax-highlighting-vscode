@@ -1,8 +1,23 @@
 {
-  "name": "narratlanguage",
-  "displayName": "NarratLanguage",
+  "name": "language-narrat",
+  "displayName": "Narrat Language",
   "description": "Syntax highlighting for narrat scripting language (.nar)",
   "version": "0.0.1",
+  "publisher": "Liana Pigeot",
+  "license": "MIT",
+  "homepage": "https://github.com/liana-p/narrat-syntax-highlighting-vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liana-p/narrat-syntax-highlighting-vscode.git"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1f0808",
+    "theme": "dark"
+  },
+  "keywords": [
+    "narrat"
+  ],
   "engines": {
     "vscode": "^1.69.0"
   },
@@ -10,6 +25,7 @@
     "Programming Languages"
   ],
   "scripts": {
+    "vscode:prepublish": "npm run compile",
     "compile": "npx js-yaml syntaxes/narrat.tmLanguage.yaml > syntaxes/narrat.tmLanguage.json"
   },
   "contributes": {
@@ -25,7 +41,11 @@
           ".narrat",
           ".rat"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./narrat-logo.svg",
+          "dark": "./narrat-logo.svg"
+        }
       }
     ],
     "grammars": [
