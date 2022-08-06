@@ -26,9 +26,15 @@
   ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "compile": "npx js-yaml syntaxes/narrat.tmLanguage.yaml > syntaxes/narrat.tmLanguage.json"
+    "compile": "npx js-yaml syntaxes/narrat.tmLanguage.yaml > syntaxes/narrat.tmLanguage.json && npx js-yaml snippets/snippets.yaml > snippets/snippets.json"
   },
   "contributes": {
+    "snippets": [
+      {
+        "language": "narrat",
+        "path": "snippets/snippets.json"
+      }
+    ],
     "languages": [
       {
         "id": "narrat",

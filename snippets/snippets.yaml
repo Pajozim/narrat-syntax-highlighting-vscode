@@ -1,0 +1,21 @@
+---
+talk:
+  prefix: ntalk
+  body:
+    - talk ${1:character} ${3:idle} "${2:Hello}"
+  description: The talk command
+choice:
+  prefix: nchoice
+  body:
+    - "choice:"
+    - "  ${1:prompt}"
+    - "  ${2:first_choice}:"
+    - "    ${3:first_choice_result}"
+    - "  ${4:second_choice}:"
+    - "    ${5:second_choice_result}"
+  description: A choice command
+check:
+  prefix: nroll
+  body:
+    - "roll ${1:skillCheckId} ${2:skillId} ${3:difficulty}"
+  description: A skill check command
