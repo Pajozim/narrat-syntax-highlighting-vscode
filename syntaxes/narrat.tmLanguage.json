@@ -3,10 +3,10 @@
   "name": "Narrat Language",
   "patterns": [
     {
-      "include": "#expression"
+      "include": "#comments"
     },
     {
-      "include": "#comments"
+      "include": "#expression"
     }
   ],
   "repository": {
@@ -120,11 +120,11 @@
       "patterns": [
         {
           "name": "keyword.operator.logic.narrat",
-          "match": "(&&|\\|\\||!=|==|>=|<=|<|>|!|\\?)"
+          "match": "(&&|\\|\\||!=|==|>=|<=|<|>|!|\\?)\\s"
         },
         {
           "name": "keyword.operator.arithmetic.narrat",
-          "match": "(\\+|-|\\*|\\/)"
+          "match": "(\\+|-|\\*|\\/)\\s"
         }
       ]
     },
@@ -218,7 +218,7 @@
       "patterns": [
         {
           "name": "comment.line.narrat",
-          "match": "#.*$"
+          "match": "\\/\\/.*$"
         }
       ]
     }
