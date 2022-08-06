@@ -2,7 +2,7 @@
   "name": "language-narrat",
   "displayName": "Narrat Language",
   "description": "Syntax highlighting for narrat scripting language (.nar)",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "publisher": "NarratEngine",
   "license": "MIT",
   "homepage": "https://github.com/liana-p/narrat-syntax-highlighting-vscode",
