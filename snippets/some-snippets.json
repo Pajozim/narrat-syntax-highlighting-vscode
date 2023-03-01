@@ -1,0 +1,1048 @@
+{
+    " talk [character] [pose] [text]" : {
+        
+        "prefix": "talk",
+        
+        "body": [
+            
+            "talk \" \""
+        ]
+    },
+        
+    " think [character] [pose] [text]" : {
+        
+        "prefix": "think",
+        
+        "body": [
+            
+            "think \" \""
+        ]
+    },
+
+    " idle " : {
+        
+        "prefix": "idle",
+        
+        "body": [
+            
+            "idle "
+        ]
+    },
+
+    " player " : {
+        
+        "prefix": "player",
+        
+        "body": [
+            
+            "player "
+        ]
+    },
+
+    " jump [label]" : {
+        
+        "prefix": "jump",
+        
+        "body": [
+            
+            "jump "
+        ]
+    },
+    
+    " run [label] [arg1] [arg2]" : {
+        
+        "prefix": "run",
+        
+        "body": [
+
+            "run "
+        ]
+    },
+    
+    " return [value]" : {
+        
+        "prefix": "return",
+        
+        "body": [
+            
+            "return "
+        ]
+    },
+
+    " if [condition]:" : {
+        
+        "prefix": "if",
+        
+        "body": [
+            
+            "if "
+        ]
+    },
+
+    " else: " : {
+        
+        "prefix": "else: ",
+        
+        "body": [
+            
+            "else: ",
+            "   "
+        ]
+    },
+
+    " choice " : {
+        
+        "prefix": "choice",
+        
+        "body": [
+            
+            "choice: ",
+            "\" \":",
+            "\"   \"",
+            "\" \":",
+            "\"  \""
+        ]
+    },
+
+    " text_field " : {
+        
+        "prefix": "text_field",
+        
+        "body": [
+            
+            "text field \" \""
+        ]
+    },
+    
+    " && " : {
+        
+        "prefix": "and",
+        
+        "body": [
+            
+            "&& "
+        ]    },
+
+    " || " : {
+        
+        "prefix": "or",
+        
+        "body": [
+            
+            "|| "
+        ]
+    },   
+    
+    " ! " : {
+        
+        "prefix": "not",
+        
+        "body": [
+            
+            "! "
+        ]
+    }, 
+
+    " ? :" : {
+        
+        "prefix": "ternary",
+        
+        "body": [
+            
+            "?  : "
+        ]
+    },  
+    
+    " ? " : {
+        
+        "prefix": "ternary",
+        
+        "body": [
+            
+            "?  : "
+        ]
+    },  
+
+    "clamp [min] [max] [variable]" : {
+        
+        "prefix": "clamp",
+        
+        "body": [
+            
+            "clamp "
+        ],
+
+        "description": "If variable is below [min], return [min]. If variable is between [min] and [max], returns it. If variable is over [max], returns [max]."
+    },
+
+    " floor [value] " : {
+        
+        "prefix": "floor",
+        
+        "body": [
+            
+            "floor "
+        ],
+
+        "description": "Rounds a number down."
+    },  
+
+    " ceil [value] " : {
+        
+        "prefix": "ceil",
+        
+        "body": [
+            
+            "ceil "
+        ],
+
+        "description": "Rounds a number up."
+    },  
+
+    " round [value]" : {
+        
+        "prefix": "round",
+        
+        "body": [
+            
+            "round "
+        ],
+
+        "description": "Rounds to nearest integer."
+    },  
+
+    " sqrt [value] " : {
+        
+        "prefix": "sqrt",
+        
+        "body": [
+            
+            "sqrt "
+        ],
+
+        "description": "Returns the square root of a number."
+    },  
+
+    " play music [mode] [audioName] [channel] " : {
+        
+        "prefix": "play music",
+        
+        "body": [
+            
+            "play music "
+        ]
+    },  
+    
+    " pause music " : {
+        
+        "prefix": "pause music",
+        
+        "body": [
+            
+            "pause music "
+        ]
+    },
+    
+    " stop music " : {
+        
+        "prefix": "stop music",
+        
+        "body": [
+            
+            "stop music "
+        ]
+    },  
+
+    " add_item [itemName]" : {
+        
+        "prefix": "add_item",
+        
+        "body": [
+            
+            "add_item "
+        ]
+    },  
+    
+    " remove_item [itemName] " : {
+        
+        "prefix": "remove_item",
+        
+        "body": [
+            
+            "remove_item "
+        ]
+    },  
+
+    " has_item? [itemName] [amount]" : {
+        
+        "prefix": "has_item?",
+        
+        "body": [
+            
+            "has_item? "
+        ],
+        
+        "description": "Returns true if there is enough of the item."
+    },  
+
+    " item_amount? [itemName] " : {
+        
+        "prefix": "item_amount",
+        
+        "body": [
+            
+            "item_amount "
+        ],
+
+        "description": "Returns the amount of an item the player has."
+    },  
+
+    " enable_interaction [tag] " : {
+        
+        "prefix": "enable_interaction",
+        
+        "body": [
+            
+            "enable_interaction "
+        ]
+    },  
+    
+    " disable_interaction [tag] " : {
+        
+        "prefix": "disable_interaction",
+        
+        "body": [
+            
+            "disable_interaction "
+        ]
+    },  
+
+    " notify " : {
+        
+        "prefix": "notify",
+        
+        "body": [
+            
+            "notify "
+        ]
+    },  
+
+    " disable_notifications " : {
+        
+        "prefix": "disable_notifications",
+        
+        "body": [
+            
+            "disable_notifications "
+        ]
+    },  
+
+    " enable_notifications " : {
+        
+        "prefix": "enable_notifications",
+        
+        "body": [
+            
+            "enable_notifications "
+        ]
+    },  
+
+    " start_quest [questName] " : {
+        
+        "prefix": "start_quest",
+        
+        "body": [
+            
+            "start_quest "
+        ]
+    },  
+
+    " complete_quest [questName] " : {
+        
+        "prefix": "complete_quest",
+        
+        "body": [
+            
+            "complete_quest "
+        ]
+    },  
+
+    " start_objective [questName] [objectiveName] " : {
+        
+        "prefix": "start_objective",
+        
+        "body": [
+            
+            "start_objective "
+        ]
+    },  
+
+    " complete_objective [questName] [objectiveName] " : {
+        
+        "prefix": "complete_objective",
+        
+        "body": [
+            
+            "complete_objective "
+        ]
+    },  
+
+    " quest_completed? [questName]" : {
+        
+        "prefix": "quest_completed?",
+        
+        "body": [
+            
+            "quest_completed "
+        ]
+    },  
+
+    " objective_completed? [questName] [objectiveName]" : {
+        
+        "prefix": "objective_completed?",
+        
+        "body": [
+            
+            "objective_completed? "
+        ]
+    },  
+
+    " quest_started? [questName]" : {
+        
+        "prefix": "quest_started?",
+        
+        "body": [
+            
+            "quest_started "
+        ]
+    },  
+
+    " objective_started? [questName] [objectiveName] " : {
+        
+        "prefix": "objective_started?",
+        
+        "body": [
+            
+            "objective_started? "
+        ]
+    },  
+
+    " random [min] [max] " : {
+        
+        "prefix": "random",
+        
+        "body": [
+            
+            "random "
+        ]
+    },  
+
+    " random_float [mix] [max] " : {
+        
+        "prefix": "random_float",
+        
+        "body": [
+            
+            "random_float "
+        ]
+    },  
+
+    " random_from_args [args] " : {
+        
+        "prefix": "random_from_args",
+        
+        "body": [
+            
+            "random_from_args "
+        ]
+    },  
+
+    " random_from_array [array] " : {
+        
+        "prefix": "random_from_array",
+        
+        "body": [
+            
+            "random_from_array "
+        ]
+    },  
+
+    " set_screen [screen] [optional: layer] " : {
+        
+        "prefix": "set_screen",
+        
+        "body": [
+            
+            "set_screen "
+        ]
+    },  
+
+    " empty_layer [layer] " : {
+        
+        "prefix": "empty_layer",
+        
+        "body": [
+            
+            "empty_layer "
+        ]
+    },  
+
+    " set_button [button] [true/false/hidden] " : {
+        
+        "prefix": "set_button",
+        
+        "body": [
+            
+            "set_button "
+        ]
+    },  
+
+    "add_level [skill] [amount] " : {
+        
+        "prefix": "add_level",
+        
+        "body": [
+            
+            "add_level "
+        ]
+    },  
+
+    " set_level [skill] [value]" : {
+        
+        "prefix": "set_level",
+        
+        "body": [
+            
+            "set_level "
+        ]
+    },  
+
+    " add_xp [skill] [amount]" : {
+        
+        "prefix": "add_xp",
+        
+        "body": [
+            
+            "add_xp "
+        ]
+    },  
+
+    " get_level [skill] " : {
+        
+        "prefix": "get_level",
+        
+        "body": [
+            
+            "get_level "
+        ]
+    },  
+
+    " get_xp [skill] " : {
+        
+        "prefix": "get_xp",
+        
+        "body": [
+            
+            "get_xp "
+        ]
+    },  
+
+    " roll [skillCheck] [skill] [difficulty] " : {
+        
+        "prefix": "roll",
+        
+        "body": [
+            
+            "roll "
+        ],
+
+        "description": "Runs a skill check with a certain difficulty against a skill dice. Returns true or false."
+    },  
+
+    " get_skill_check [skillCheck]" : {
+        
+        "prefix": "get_skill_check",
+        
+        "body": [
+            
+            "get_skill_check "
+        ],
+
+        "description": "Returns the result of a skill check, which is an object with 'happened', 'succeeded', 'hidden' booleans "
+    },  
+
+    " skill_check_result [skillCheck] " : {
+        
+        "prefix": "skill_check_result",
+        
+        "body": [
+            
+            "skill_check_result "
+        ],
+
+        "description": "Gets the result of a skill check as a boolean."
+    },  
+
+    " reset_roll [skillCheck]" : {
+        
+        "prefix": "reset_roll",
+        
+        "body": [
+            
+            "reset_roll "
+        ]
+    },  
+
+    " add_stat [stat] [amount]" : {
+        
+        "prefix": "add_stat",
+        
+        "body": [
+            
+            "add_stat "
+        ]
+    },  
+
+    " set_stat [stat] [value] " : {
+        
+        "prefix": "set_stat",
+        
+        "body": [
+            
+            "set_stat "
+        ]
+    },  
+
+    " get_stat_value [stat] " : {
+        
+        "prefix": "get_stat_value",
+        
+        "body": [
+            
+            "get_stat_value "
+        ]
+    },  
+
+    " push [array] [value] " : {
+        
+        "prefix": "push",
+        
+        "body": [
+            
+            "push "
+        ],
+
+        "description": "Adds a value to the end of the array."
+    },  
+
+    " pop [array] " : {
+        
+        "prefix": "pop",
+        
+        "body": [
+            
+            "pop "
+        ],
+
+        "description": "Removes the last value of the array, returning it."
+    },  
+
+    " shift [array] " : {
+        
+        "prefix": "shift",
+        
+        "body": [
+            
+            "shift "
+        ],
+
+        "description": "Removes the first value of an array, returning it."
+    },  
+
+    " array_join [array]" : {
+        
+        "prefix": "array_join",
+        
+        "body": [
+            
+            "array_join "
+        ],
+
+        "description": "Joins an array into a string, with the first parameter being the separator to use."
+    },  
+
+    " array_concat [array1] [array2] " : {
+        
+        "prefix": "array_concat",
+        
+        "body": [
+            
+            "array_concat "
+        ]
+    },  
+
+    " includes [array] [value] " : {
+        
+        "prefix": "includes",
+        
+        "body": [
+            
+            "includes "
+        ]
+    },  
+
+    " reverse [array] " : {
+        
+        "prefix": "reverse",
+        
+        "body": [
+            
+            "reverse "
+        ]
+    },  
+
+    " slice [array] [startIndex] [endIndex]" : {
+        
+        "prefix": "slice",
+        
+        "body": [
+            
+            "slice "
+        ],
+
+        "description": "Returns a slice of the array beginning from startIndex and ending with endIndex."
+    },  
+    
+    " splice [array] [startIndex] [amount] " : {
+        
+        "prefix": "splice",
+        
+        "body": [
+            
+            "splice "
+        ],
+        
+        "description": "Removes [amount] elements from the array beginning from startIndex. Returns the sliced elements."
+    },  
+    
+    " shuffle [array] " : {
+        
+        "prefix": "shuffle",
+        
+        "body": [
+            
+            "shuffle "
+        ]
+    },  
+
+    " time_now " : {
+        
+        "prefix": "time_now",
+        
+        "body": [
+            
+            "time_now "
+        ],
+
+        "description": "Returns the current unix timestamp in milliseconds."
+    },  
+
+    " total_playtime " : {
+        
+        "prefix": "total_playtime",
+        
+        "body": [
+            
+            "total_playtime "
+        ],
+
+        "description": "Returns the current total playtime for this save file."
+    },  
+
+    " session_playtime " : {
+        
+        "prefix": "session_playtime",
+        
+        "body": [
+            
+            "session_playtime "
+        ],
+
+        "description": "Returns the current session playtime."
+    },  
+
+    " to_days (from ms) " : {
+        
+        "prefix": "to_days",
+        
+        "body": [
+            
+            "to_days "
+        ]
+    },  
+
+    " to_hours (from ms) " : {
+        
+        "prefix": "to_hours",
+        
+        "body": [
+            
+            "to_hours "
+        ]
+    },  
+
+    " to_minutes (from ms) " : {
+        
+        "prefix": "to_minutes",
+        
+        "body": [
+            
+            "to_minutes "
+        ]
+    },  
+
+    " to_seconds (from ms) " : {
+        
+        "prefix": "to_seconds",
+        
+        "body": [
+            
+            "to_seconds "
+        ]
+    },  
+
+    " concat [strings] " : {
+        
+        "prefix": "concat",
+        
+        "body": [
+            
+            "concat \" \" \" \" "
+        ]
+    },  
+
+    " join [joinString] [strings] " : {
+        
+        "prefix": "join",
+        
+        "body": [
+            
+            "join \" \" \" \" \" \" "
+        ]
+    },  
+
+    " create_sprite [sprite] [sprite.x] [sprite.y] " : {
+        
+        "prefix": "create_sprite",
+        
+        "body": [
+            
+            "create_sprite "
+        ]
+    },  
+    
+    " create_object [object] [object.x] [object.y] " : {
+        
+        "prefix": "create_object",
+        
+        "body": [
+            
+            "create_object "
+        ]
+    },  
+
+    " delete_sprite [sprite]" : {
+        
+        "prefix": "delete_sprite",
+        
+        "body": [
+            
+            "delete_sprite "
+        ]
+    },  
+
+    " clear_dialog " : {
+        
+        "prefix": "clear_dialog",
+        
+        "body": [
+            
+            "clear_dialog ",
+            ""
+        ]
+    },  
+
+    " log [string] %{variable} " : {
+        
+        "prefix": "log",
+        
+        "body": [
+            
+            "log "
+        ]
+    },  
+
+    " menu_return " : {
+        
+        "prefix": "menu_return",
+        
+        "body": [
+            
+            "menu_return ",
+            ""
+        ]
+    },  
+
+    " save [save file name] " : {
+        
+        "prefix": "save",
+        
+        "body": [
+            
+            "save "
+        ]
+    },  
+
+    " save_prompt [save file name] " : {
+        
+        "prefix": "save_prompt",
+        
+        "body": [
+            
+            "save_prompt "
+        ],
+
+        "description": "Asks the user if they want to save, and saves if confirmed by user."
+    },  
+
+    " wait [time in ms] " : {
+        
+        "prefix": "wait",
+        
+        "body": [
+            
+            "wait "
+        ]
+    },  
+
+    " load_data [file path] " : {
+        
+        "prefix": "load_data",
+        
+        "body": [
+            
+            "load_data "
+        ]
+    },  
+
+    " Hello World! " : {
+        
+        "prefix": "Hello World!",
+        
+        "body": [
+            
+            "Hello World! "
+        ]
+    },  
+
+    " Narrat " : {
+        
+        "prefix": "Narrat",
+        
+        "body": [
+            
+            "Narrat "
+        ]
+    },  
+
+    " array " : {
+        
+        "prefix": "array",
+        
+        "body": [
+            
+            "array "
+        ]
+    },  
+
+    " item " : {
+        
+        "prefix": "item",
+        
+        "body": [
+            
+            "item "
+        ]
+    },  
+
+    " stat " : {
+        
+        "prefix": "stat",
+        
+        "body": [
+            
+            "stat "
+        ]
+    },  
+
+    " skill " : {
+        
+        "prefix": "skill",
+        
+        "body": [
+            
+            "skill "
+        ]
+    },  
+    
+    " music " : {
+        
+        "prefix": "music",
+        
+        "body": [
+            
+            "music "
+        ]
+    },  
+
+    " sprite " : {
+        
+        "prefix": "sprite",
+        
+        "body": [
+            
+            "sprite "
+        ]
+    },  
+    
+    " animation " : {
+        
+        "prefix": "animation",
+        
+        "body": [
+            
+            "animation "
+        ]
+    },  
+    
+    " mouse " : {
+        
+        "prefix": "mouse",
+        
+        "body": [
+            
+            "mouse "
+        ]
+    },  
+
+    " plugin " : {
+        
+        "prefix": "plugin",
+        
+        "body": [
+            
+            "plugin "
+        ]
+    } 
+
+}
